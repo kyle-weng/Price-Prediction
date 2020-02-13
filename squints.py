@@ -24,6 +24,9 @@ def deidize(data):
     """drop id column"""
     return data.drop("id", axis=1)
 
+def depriceize(data):
+    return data.drop(["last_price","mid"],axis=1)
+
 def relize(data):
     """replace bid[i] and ask[i] columns with
     bid[i]-bid[i-1] ans ask[i]-ask[i-1]"""
